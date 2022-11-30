@@ -1,0 +1,47 @@
+{
+  "name": "Loft",
+  "version": "0.1.0",
+  "short_name": "Loft",
+  "theme_color": "black",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/?utm_source=pwa",
+  "icons": [
+    {
+      "src": "/favicon/apple-icon-60x60.png",
+      "sizes": "60x60",
+      "type": "image/png",
+      "density": "1.0"
+    },
+    {
+      "src": "/favicon/apple-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "/favicon/apple-icon-114x114.png",
+      "sizes": "114x114",
+      "type": "image/png",
+      "density": "2.0"
+    },
+    {
+      "src": "/favicon/apple-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
+      "src": "/favicon/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "/favicon/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
