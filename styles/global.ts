@@ -14,7 +14,7 @@ export const GlobalStyle = globalCss({
     padding: '0',
     margin: '0',
     height: '100%',
-    color: 'var(--colors-regular)',
+    color: 'var(--colors-darker)',
     fontFamily: 'var(--fonts-default)'
   },
 
@@ -32,6 +32,15 @@ export const GlobalStyle = globalCss({
     padding: '0',
     fontFamily: 'var(--fonts-default)',
     cursor: 'pointer'
+  },
+
+  '.main-wrapper': {
+    maxWidth: '1440px',
+    width: '100%',
+    height: '100%',
+    margin: '0 auto',
+    paddingLeft: '20px',
+    paddingRight: '20px'
   },
 
   '::selection': {
@@ -61,5 +70,12 @@ export const GlobalStyle = globalCss({
     WebkitTapHighlightColor: 'rgba(0,0,0,0)',
     WebkitAppearance: 'none',
     outline: 'none'
+  },
+
+  '@bp768': {
+    '.main-wrapper': {
+      paddingLeft: '25px',
+      paddingRight: '25px'
+    }
   }
 })

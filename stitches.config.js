@@ -13,14 +13,16 @@ export const {
   theme: {
     colors: {
       primary: '#FF774A',
+      secundary: '#20A483',
       white: '#FFFFFF',
       regular: '#697077',
+      darker: '#191F23',
       black: '#000000',
       'sucess-primary': '#28B833',
       'error-primary': '#FF0000',
       'warning-primary': '#FACA07',
       'background-primary': '#FFFFFF',
-      'hover-primary': 'rgb(245 103 56 / 90%)'
+      'hover-primary': '#D94616'
     },
     fonts: {
       default: 'Roboto, sans-serif'
@@ -40,7 +42,7 @@ export const {
       '9xl': '6rem'
     },
     fontWeights: {
-      small: 200,
+      small: 300,
       regular: 400,
       medium: 500,
       bold: 700
@@ -61,6 +63,7 @@ export const {
     }
   },
   media: {
-    bp768: '(min-width: 768px)'
+    bp768: '(min-width: 768px)',
+    bp990: '(min-width: 990px)'
   }
 })

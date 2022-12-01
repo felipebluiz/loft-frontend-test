@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
+import { Header } from '@/components/ui/Header'
+
 const Home: React.FC = () => {
   return (
     <>
@@ -9,7 +11,7 @@ const Home: React.FC = () => {
           Loft - Comprar e vender imóvel pode ser descomplicado e seguro
         </title>
       </Head>
-      <div>Hello World</div>
+      <Header />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { getCssText } from '../stitches.config'
+import { getCssText } from '../../stitches.config'
 
 class MyDocument extends Document {
   render(): JSX.Element {
@@ -14,7 +14,7 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
           <style
