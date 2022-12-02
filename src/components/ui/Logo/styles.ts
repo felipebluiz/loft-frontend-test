@@ -25,5 +25,9 @@ export const StyledLogo = styled('div', {
         }
       }
     }
+  },
+
+  defaultVariants: {
+    size: 'md'
   }
 })

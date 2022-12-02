@@ -25,7 +25,7 @@ export const {
       'hover-primary': '#D94616'
     },
     fonts: {
-      default: 'Roboto, sans-serif'
+      default: 'Inter, sans-serif'
     },
     fontSizes: {
       xxs: '0.625rem',
@@ -42,7 +42,7 @@ export const {
       '9xl': '6rem'
     },
     fontWeights: {
-      small: 300,
+      small: 200,
       regular: 400,
       medium: 500,
       bold: 700

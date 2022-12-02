@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { StyledLogo } from './styles'
 
 type LogoProps = React.ComponentProps<typeof StyledLogo> & {
-  size: string
+  size?: string
 }
 
 export const Logo: React.FC<LogoProps> = (props) => (

@@ -15,7 +15,8 @@ export const GlobalStyle = globalCss({
     margin: '0',
     height: '100%',
     color: 'var(--colors-darker)',
-    fontFamily: 'var(--fonts-default)'
+    fontFamily: 'var(--fonts-default)',
+    letterSpacing: '-0.1px'
   },
 
   'h1, h2, h3, p': {

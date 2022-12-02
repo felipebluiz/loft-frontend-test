@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
     <>
       <Container>
         <div className="main-wrapper">
-          <Logo size="md" />
+          <Logo />
           <nav className="navigation-container">
             <ul>
               <li className={router.pathname === '/' ? 'active' : ''}>
