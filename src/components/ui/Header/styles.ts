@@ -9,7 +9,7 @@ export const Container = styled('header', {
   height: '64px',
   backgroundColor: 'rgb(255 255 255 / 95%)',
   backdropFilter: 'blur(20px)',
-  borderBottom: '1px solid #E1E9Ef',
+  borderBottom: '1px solid #E1E9EF',
 
   '.main-wrapper': {
     display: 'flex',
@@ -51,11 +51,7 @@ export const Container = styled('header', {
               borderBottom: '4px solid transparent'
             },
 
-            '&:hover a': {
-              borderBottom: '4px solid var(--colors-darker)'
-            },
-
-            '&.active a': {
+            '&:hover a, &.active a': {
               borderBottom: '4px solid var(--colors-primary)'
             }
           }

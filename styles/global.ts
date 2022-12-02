@@ -34,15 +34,6 @@ export const GlobalStyle = globalCss({
     cursor: 'pointer'
   },
 
-  '.main-wrapper': {
-    maxWidth: '1440px',
-    width: '100%',
-    height: '100%',
-    margin: '0 auto',
-    paddingLeft: '20px',
-    paddingRight: '20px'
-  },
-
   '::selection': {
     color: 'var(--colors-white)',
     background: 'var(--colors-primary)'
@@ -72,10 +63,27 @@ export const GlobalStyle = globalCss({
     outline: 'none'
   },
 
-  '@bp768': {
+  '.main-wrapper': {
+    maxWidth: '1440px',
+    width: '100%',
+    height: '100%',
+    margin: '0 auto',
+    paddingLeft: '20px',
+    paddingRight: '20px'
+  },
+
+  '.modal-open': {
+    overflowY: 'hidden'
+  },
+
+  '@bp990': {
     '.main-wrapper': {
       paddingLeft: '25px',
       paddingRight: '25px'
+    },
+
+    '.modal-open': {
+      overflowY: 'inherit'
     }
   }
 })
