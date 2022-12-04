@@ -1,14 +1,20 @@
 import { styled } from '../../../../stitches.config'
 
-export const StyledIconButton = styled('button', {
+export const StyledButton = styled('button', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  cursor: 'pointer',
   border: 'none',
 
-  svg: {
-    width: '20px',
-    height: '20px'
+  span: {
+    fontFamily: 'var(--fonts-default)',
+    fontSize: 'var(--fontSizes-md)',
+    fontWeight: 'var(--fontWeights-small)'
+  },
+
+  '.spinner': {
+    display: 'none'
   },
 
   variants: {
@@ -31,13 +37,8 @@ export const StyledIconButton = styled('button', {
       }
     },
     size: {
-      sm: {
-        width: '36px',
-        height: '36px'
-      },
       md: {
-        width: '40px',
-        height: '40px'
+        padding: '14px 24px'
       }
     },
     outlined: {
@@ -56,10 +57,23 @@ export const StyledIconButton = styled('button', {
     disabled: {
       true: {
         opacity: 'var(--opacity-intense)',
-        cursor: 'not-allowed',
+        cursor: 'not-allowed'
+      }
+    },
+    full: {
+      true: {
+        width: '100%'
+      }
+    },
+    loading: {
+      true: {
+        '.spinner': {
+          display: 'initial',
+          position: 'absolute'
+        },
 
-        '&:hover': {
-          opacity: 'var(--opacity-intense)'
+        span: {
+          visibility: 'hidden'
         }
       }
     }
@@ -111,6 +125,7 @@ export const StyledIconButton = styled('button', {
   ],
 
   defaultVariants: {
+    size: 'md',
     radius: 'rounded'
   }
 })

@@ -12,7 +12,7 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      primary: '#FF774A',
+      primary: '#F56738',
       secundary: '#20A483',
       white: '#FFFFFF',
       regular: '#697077',
@@ -42,7 +42,7 @@ export const {
       '9xl': '6rem'
     },
     fontWeights: {
-      small: 200,
+      small: 300,
       regular: 400,
       medium: 500,
       bold: 700

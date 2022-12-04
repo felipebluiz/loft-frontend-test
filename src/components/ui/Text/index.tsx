@@ -8,6 +8,6 @@ type TextProps = React.ComponentProps<typeof StyledText> & {
   weight?: string
 }
 
-export const Text: React.FC<TextProps> = ({ children, ...props }) => {
-  return <StyledText {...props}>{children}</StyledText>
-}
+export const Text: React.FC<TextProps> = ({ children, ...props }) => (
+  <StyledText {...props}>{children}</StyledText>
+)
