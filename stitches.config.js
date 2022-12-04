@@ -15,7 +15,7 @@ export const {
       primary: '#F56738',
       secundary: '#20A483',
       white: '#FFFFFF',
-      regular: '#697077',
+      regular: '#B7C8D5',
       darker: '#191F23',
       black: '#000000',
       'sucess-primary': '#28B833',
