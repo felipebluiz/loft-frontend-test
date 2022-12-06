@@ -9,6 +9,23 @@ const nextConfig = {
         source: '/home',
         destination: '/',
         permanent: true
+      },
+      {
+        source: '/contact',
+        destination: '/contato',
+        permanent: true
+      }
+    ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/home'
+      },
+      {
+        source: '/contato',
+        destination: '/contact'
       }
     ]
   }

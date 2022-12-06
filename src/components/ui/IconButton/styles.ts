@@ -56,7 +56,7 @@ export const StyledIconButton = styled('button', {
     disabled: {
       true: {
         opacity: 'var(--opacity-intense)',
-        cursor: 'not-allowed',
+        pointerEvents: 'none',
 
         '&:hover': {
           opacity: 'var(--opacity-intense)'

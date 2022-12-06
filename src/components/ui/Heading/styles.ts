@@ -3,7 +3,7 @@ import { styled } from '../../../../stitches.config'
 export const StyledHeading = styled('h2', {
   fontFamily: 'var(--fonts-default)',
   lineHeight: 'var(--lineHeights-shorter)',
-  color: 'var(--colors-white)',
+  color: 'var(--colors-darker)',
   margin: '0px',
 
   variants: {

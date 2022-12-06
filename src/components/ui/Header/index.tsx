@@ -20,10 +20,10 @@ export const Header: React.FC = () => {
           <Logo />
           <nav className="navigation-container">
             <ul>
-              <li className={router.pathname === '/' ? 'active' : ''}>
+              <li className={router.pathname === '/home' ? 'active' : ''}>
                 <Link href="/">Comprar Apartamentos</Link>
               </li>
-              <li className={router.pathname === '/contato' ? 'active' : ''}>
+              <li className={router.pathname === '/contact' ? 'active' : ''}>
                 <Link href="/contato">Contato</Link>
               </li>
             </ul>

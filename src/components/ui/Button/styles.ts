@@ -57,7 +57,7 @@ export const StyledButton = styled('button', {
     disabled: {
       true: {
         opacity: 'var(--opacity-intense)',
-        cursor: 'not-allowed'
+        pointerEvents: 'none'
       }
     },
     full: {

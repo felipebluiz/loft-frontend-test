@@ -16,8 +16,8 @@ export const StyledTextField = styled('div', {
   },
 
   svg: {
-    width: '18px',
-    height: '18px',
+    width: '20px',
+    height: '20px',
     marginLeft: '14px',
     color: 'var(--colors-regular)',
     transition: 'color 0.2s ease 0s'
@@ -38,7 +38,16 @@ export const StyledTextField = styled('div', {
     hasLeftIcon: {
       true: {
         input: {
-          paddingLeft: '14px'
+          paddingLeft: '12px'
+        }
+      }
+    },
+    error: {
+      true: {
+        borderColor: 'var(--colors-error-primary)',
+
+        svg: {
+          color: 'var(--colors-error-primary)'
         }
       }
     }

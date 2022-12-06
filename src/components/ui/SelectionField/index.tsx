@@ -1,36 +1,55 @@
 import React from 'react'
 import Select, { GroupBase, Props, StylesConfig } from 'react-select'
 
+declare module 'react-select/dist/declarations/src/Select' {
+  export interface Props<
+    Option,
+    IsMulti extends boolean,
+    Group extends GroupBase<Option>
+  > {
+    inputRef?: React.Ref<Select<Option, IsMulti, Group>>
+    error?: boolean
+  }
+}
+
 function SelectionField<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
 >(props: Props<Option, IsMulti, Group>): JSX.Element {
   const styles: StylesConfig<Option, IsMulti, Group> = {
-    control: (styles, { isFocused }) => ({
-      ...styles,
-      height: '50px',
-      borderRadius: '8px',
-      borderColor: !isFocused
-        ? 'var(--colors-regular)'
-        : 'var(--colors-darker)',
-      boxShadow: 'none ',
-      fontSize: 'var(--fontSizes-sm)',
+    control: (styles, { isFocused }) => {
+      let borderColor = 'var(--colors-regular)'
 
-      svg: {
-        color: !isFocused ? 'var(--colors-regular)' : 'var(--colors-darker)'
-      },
+      if (isFocused) {
+        borderColor = 'var(--colors-darker)'
+      } else if (props.error) {
+        borderColor = 'var(--colors-error-primary) !important'
+      }
 
-      '&:hover': {
-        borderColor: !isFocused
-          ? 'var(--colors-regular)'
-          : 'var(--colors-darker)',
+      return {
+        ...styles,
+        height: '50px',
+        borderRadius: '8px',
+        borderColor,
+        boxShadow: 'none ',
+        fontSize: 'var(--fontSizes-sm)',
 
         svg: {
           color: !isFocused ? 'var(--colors-regular)' : 'var(--colors-darker)'
+        },
+
+        '&:hover': {
+          borderColor: !isFocused
+            ? 'var(--colors-regular)'
+            : 'var(--colors-darker)',
+
+          svg: {
+            color: !isFocused ? 'var(--colors-regular)' : 'var(--colors-darker)'
+          }
         }
       }
-    }),
+    },
     valueContainer: (styles) => ({ ...styles, padding: '0 14px' }),
     placeholder: (styles) => ({ ...styles, color: 'var(--colors-regular)' }),
     indicatorSeparator: (styles, { isFocused }) => ({
@@ -61,11 +80,14 @@ function SelectionField<
 
   return (
     <Select
+      {...props}
+      ref={props.inputRef}
+      id="selection-field"
+      instanceId="selection-field"
       blurInputOnSelect
       noOptionsMessage={() => 'Sem resultados'}
       placeholder="Selecionar"
       styles={styles}
-      {...props}
     />
   )
 }
