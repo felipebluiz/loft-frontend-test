@@ -12,8 +12,7 @@ export const Container = styled('div', {
   flex: '1',
   display: 'flex',
   flexDirection: 'column',
-  paddingLeft: '20px',
-  paddingRight: '20px',
+  paddingX: '20px',
 
   header: {
     display: 'flex',
@@ -39,8 +38,7 @@ export const Container = styled('div', {
 
         a: {
           display: 'block',
-          paddingTop: '20px',
-          paddingBottom: '20px',
+          paddingY: '20px',
           borderBottom: '1px solid #E1E9EF',
           fontSize: 'var(--fontSizes-md)',
           fontWeight: 'var(--fontWeights-regular)',

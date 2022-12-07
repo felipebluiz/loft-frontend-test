@@ -5,10 +5,10 @@ export const Container = styled('div', {
   flexDirection: 'column',
   gap: '50px',
   maxWidth: '480px',
-  padding: '50px 0',
-  margin: '0 auto',
+  paddingY: '50px',
+  marginX: 'auto',
 
-  '.page-content-header': {
+  '.page-header': {
     textAlign: 'center',
 
     p: {

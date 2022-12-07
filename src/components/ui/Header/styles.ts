@@ -39,7 +39,7 @@ export const Container = styled('header', {
 
           li: {
             listStyle: 'none',
-            padding: '0 16px',
+            paddingX: '16px',
 
             a: {
               display: 'flex',

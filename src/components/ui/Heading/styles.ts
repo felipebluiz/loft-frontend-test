@@ -4,7 +4,7 @@ export const StyledHeading = styled('h2', {
   fontFamily: 'var(--fonts-default)',
   lineHeight: 'var(--lineHeights-shorter)',
   color: 'var(--colors-darker)',
-  margin: '0px',
+  margin: '0',
 
   variants: {
     size: {

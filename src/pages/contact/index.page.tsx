@@ -82,8 +82,8 @@ const Contact: React.FC = () => {
       <Header />
       <div className="main-wrapper">
         <Container>
-          <div className="page-content-header">
-            <Heading size="lg">Fale conosco</Heading>
+          <div className="page-header">
+            <Heading size="lg">Fale Conosco</Heading>
             <Text>
               Ficou com alguma dúvida? <br /> A gente te ajuda a encontrar o lar
               dos sonhos
@@ -188,7 +188,7 @@ const Contact: React.FC = () => {
                 outlined
                 onClick={() => router.push('/')}
               >
-                Ver apartamentos
+                Ver Apartamentos
               </Button>
               <Button
                 type="submit"

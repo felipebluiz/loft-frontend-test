@@ -21,7 +21,6 @@ export const {
       'sucess-primary': '#28B833',
       'error-primary': '#FF0000',
       'warning-primary': '#FACA07',
-      'background-primary': '#FFFFFF',
       'hover-primary': '#D94616'
     },
     fonts: {
@@ -65,5 +64,23 @@ export const {
   media: {
     bp768: '(min-width: 768px)',
     bp990: '(min-width: 990px)'
+  },
+  utils: {
+    paddingX: (value) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    paddingY: (value) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+    marginX: (value) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    marginY: (value) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
   }
 })

@@ -7,7 +7,7 @@ export const GlobalStyle = globalCss({
   },
 
   html: {
-    backgroundColor: 'var(--colors-background-primary)'
+    backgroundColor: 'var(--colors-white)'
   },
 
   'html, body': {
@@ -112,9 +112,8 @@ export const GlobalStyle = globalCss({
     maxWidth: '1440px',
     width: '100%',
     height: '100%',
-    margin: '0 auto',
-    paddingLeft: '20px',
-    paddingRight: '20px'
+    marginX: 'auto',
+    paddingX: '20px',
   },
 
   '.modal-open': {
@@ -123,8 +122,7 @@ export const GlobalStyle = globalCss({
 
   '@bp990': {
     '.main-wrapper': {
-      paddingLeft: '25px',
-      paddingRight: '25px'
+      paddingX: '25px',
     },
 
     '.modal-open': {

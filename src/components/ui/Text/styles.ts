@@ -4,7 +4,7 @@ export const StyledText = styled('p', {
   fontFamily: 'var(--fonts-default)',
   lineHeight: 'var(--lineHeights-base)',
   color: 'var(--colors-regular)',
-  margin: '0px',
+  margin: '0',
 
   variants: {
     size: {
