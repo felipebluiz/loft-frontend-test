@@ -5,6 +5,7 @@ export const StyledIconButton = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   border: 'none',
+  transition: 'background 0.2s ease 0s',
 
   svg: {
     width: '20px',
@@ -27,6 +28,14 @@ export const StyledIconButton = styled('button', {
 
         '&:hover': {
           backgroundColor: 'rgb(25 31 35 / 90%)'
+        }
+      },
+      tertiary: {
+        backgroundColor: 'transparent',
+        color: 'var(--colors-darker)',
+
+        '&:hover': {
+          backgroundColor: 'rgb(167 182 195 / 20%)'
         }
       }
     },

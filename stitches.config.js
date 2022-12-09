@@ -63,24 +63,25 @@ export const {
   },
   media: {
     bp768: '(min-width: 768px)',
-    bp990: '(min-width: 990px)'
+    bp990: '(min-width: 990px)',
+    bp1280: '(min-width: 1280px)'
   },
   utils: {
     paddingX: (value) => ({
       paddingLeft: value,
-      paddingRight: value,
+      paddingRight: value
     }),
     paddingY: (value) => ({
       paddingTop: value,
-      paddingBottom: value,
+      paddingBottom: value
     }),
     marginX: (value) => ({
       marginLeft: value,
-      marginRight: value,
+      marginRight: value
     }),
     marginY: (value) => ({
       marginTop: value,
-      marginBottom: value,
-    }),
+      marginBottom: value
+    })
   }
 })

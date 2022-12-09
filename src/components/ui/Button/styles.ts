@@ -6,6 +6,7 @@ export const StyledButton = styled('button', {
   justifyContent: 'center',
   cursor: 'pointer',
   border: 'none',
+  transition: 'background 0.2s ease 0s',
 
   span: {
     fontFamily: 'var(--fonts-default)',

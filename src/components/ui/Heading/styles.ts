@@ -8,7 +8,7 @@ export const StyledHeading = styled('h2', {
 
   variants: {
     size: {
-      sm: { fontSize: 'var(--fontSizes-xl)' },
+      sm: { fontSize: 'var(--fontSizes-lg)' },
       md: { fontSize: 'var(--fontSizes-2xl)' },
       lg: { fontSize: 'var(--fontSizes-4xl)' },
       xl: { fontSize: 'var(--fontSizes-6xl)' },

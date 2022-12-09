@@ -13,8 +13,8 @@ import { Text } from '@/components/ui/Text'
 import { TextField } from '@/components/ui/TextField'
 import { SelectionField } from '@/components/ui/SelectionField'
 import { Button } from '@/components/ui/Button'
-import * as masks from '@/utils/masks'
 import { SelectType } from '@/global/types'
+import * as masks from '@/utils/masks'
 
 import { Container } from './styles'
 

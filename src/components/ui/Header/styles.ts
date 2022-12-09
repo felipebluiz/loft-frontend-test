@@ -9,7 +9,7 @@ export const Container = styled('header', {
   height: '64px',
   backgroundColor: 'rgb(255 255 255 / 95%)',
   backdropFilter: 'blur(20px)',
-  borderBottom: '1px solid #E1E9EF',
+  borderBottom: '1px solid #D5DCE2',
 
   '.main-wrapper': {
     display: 'flex',

@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['page.tsx', 'page.ts'],
+  images: {
+    domains: ['via.placeholder.com']
+  },
   async redirects() {
     return [
       {
