@@ -1,9 +1,9 @@
-export type SelectType = {
+export type SelectOption = {
   value: string
   label: string
 }
 
-export type ApartamentType = {
+export type Apartament = {
   id: string
   address: ApartamentAddress
   price: number

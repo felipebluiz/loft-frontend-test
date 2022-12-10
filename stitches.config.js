@@ -62,6 +62,7 @@ export const {
     }
   },
   media: {
+    bp375: '(min-width: 375px)',
     bp768: '(min-width: 768px)',
     bp990: '(min-width: 990px)',
     bp1280: '(min-width: 1280px)'

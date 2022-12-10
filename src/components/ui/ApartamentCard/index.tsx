@@ -6,21 +6,23 @@ import { Heading } from '@/components/ui/Heading'
 import { Text } from '@/components/ui/Text'
 import { IconButton } from '@/components/ui/IconButton'
 import { currencyFormat } from '@/utils/format'
-import { ApartamentType } from '@/global/types'
+import { Apartament } from '@/global/types'
 
 import { Container } from './styles'
 
 type ApartamentCardProps = {
-  apartament: ApartamentType
+  apartament: Apartament
+  openAppointmentModal: (apartament: Apartament) => void
 }
 
 export const ApartamentCard: React.FC<ApartamentCardProps> = ({
-  apartament
+  apartament,
+  openAppointmentModal
 }) => {
   const [isLiked, setIsLiked] = useState(apartament.bookmarked)
 
   return (
-    <Container>
+    <Container onClick={() => openAppointmentModal(apartament)}>
       <div className="image-container">
         <Image
           src={`${apartament.picture.src}.png`}
@@ -46,7 +48,10 @@ export const ApartamentCard: React.FC<ApartamentCardProps> = ({
           <IconButton
             size="md"
             variant="tertiary"
-            onClick={() => setIsLiked(!isLiked)}
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsLiked(!isLiked)
+            }}
           >
             <Heart
               weight={isLiked ? 'fill' : 'bold'}

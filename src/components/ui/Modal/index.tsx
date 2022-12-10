@@ -76,11 +76,11 @@ export const Modal = forwardRef<ModalHandle, ModalProps>(
       return () => closeModal()
     }, [])
 
-    useImperativeHandle(ref, () => ({
-      closeModal() {
-        closeModal()
+    useImperativeHandle(ref, () => {
+      return {
+        closeModal
       }
-    }))
+    })
 
     return (
       <StyledModal

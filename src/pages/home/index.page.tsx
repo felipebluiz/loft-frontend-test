@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { useForm, Controller } from 'react-hook-form'
@@ -9,17 +9,21 @@ import { Heading } from '@/components/ui/Heading'
 import { TextField } from '@/components/ui/TextField'
 import { SelectionField } from '@/components/ui/SelectionField'
 import { ApartamentCard } from '@/components/ui/ApartamentCard'
-import { ApartamentType, SelectType } from '@/global/types'
+import {
+  AppointmentModal,
+  AppointmentModalHandle
+} from '@/components/modal/AppointmentModal'
+import { Apartament, SelectOption } from '@/global/types'
 
 import { Container } from './styles'
 
 type HomeProps = {
-  apartaments: ApartamentType[]
+  apartaments: Apartament[]
 }
 
 type FormValues = {
   address: string
-  bedroom: SelectType
+  bedroom: SelectOption
 }
 
 const bedrooms = [
@@ -29,6 +33,7 @@ const bedrooms = [
 ]
 
 const Home: React.FC<HomeProps> = ({ apartaments }) => {
+  const appointmentModalRef = useRef<AppointmentModalHandle>(null)
   const { register, control, watch } = useForm<FormValues>()
   const watchFields = watch()
 
@@ -48,6 +53,10 @@ const Home: React.FC<HomeProps> = ({ apartaments }) => {
             return bedroom === +watchFields.bedroom.value
           })
       : apartaments
+
+  const openAppointmentModal = (data: Apartament) => {
+    appointmentModalRef.current?.openModal(data)
+  }
 
   return (
     <>
@@ -92,13 +101,18 @@ const Home: React.FC<HomeProps> = ({ apartaments }) => {
             {!!filteredApartaments.length && (
               <div className="apartaments-grid">
                 {filteredApartaments.map((apartament) => (
-                  <ApartamentCard key={apartament.id} apartament={apartament} />
+                  <ApartamentCard
+                    key={apartament.id}
+                    apartament={apartament}
+                    openAppointmentModal={openAppointmentModal}
+                  />
                 ))}
               </div>
             )}
           </div>
         </Container>
       </div>
+      <AppointmentModal ref={appointmentModalRef} />
     </>
   )
 }
@@ -107,7 +121,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const apartaments = await fetch('https://loft-br.github.io/api/listings.json')
     .then((response) => response.json())
     .then((data) =>
-      data.filter((item: ApartamentType) => item.status !== 'SOLD')
+      data.filter((apartament: Apartament) => apartament.status !== 'SOLD')
     )
 
   return {

@@ -3,7 +3,7 @@ import { styled } from '../../../../stitches.config'
 export const StyledText = styled('p', {
   fontFamily: 'var(--fonts-default)',
   lineHeight: 'var(--lineHeights-base)',
-  color: 'var(--colors-regular)',
+  color: 'var(--colors-darker)',
   margin: '0',
 
   variants: {
