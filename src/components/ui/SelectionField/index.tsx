@@ -86,7 +86,6 @@ function SelectionField<
       instanceId="selection-field"
       blurInputOnSelect
       noOptionsMessage={() => 'Sem resultados'}
-      placeholder="Selecionar"
       styles={styles}
     />
   )

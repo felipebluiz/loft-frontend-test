@@ -12,11 +12,11 @@ export const Container = styled('div', {
       flexDirection: 'column',
       gap: '20px',
 
-      'label[for=address]': {
+      '> div:first-child': {
         flex: 1
       },
 
-      'label[for=bedroom]': {
+      '> div:last-child': {
         minWidth: '205px'
       }
     }

@@ -13,7 +13,7 @@ import { Text } from '@/components/ui/Text'
 import { TextField } from '@/components/ui/TextField'
 import { SelectionField } from '@/components/ui/SelectionField'
 import { Button } from '@/components/ui/Button'
-import { SelectType } from '@/global/types'
+import { SelectOption } from '@/global/types'
 import * as masks from '@/utils/masks'
 
 import { Container } from './styles'
@@ -24,11 +24,15 @@ const reasons = [
   { value: 'deal', label: 'Negociação' }
 ]
 
+type ContactProps = {
+  saveData?: (formValue: FormValues) => void
+}
+
 type FormValues = {
   name: string
   email: string
   phoneNumber: string
-  reason: SelectType
+  reason: SelectOption
   message: string
 }
 
@@ -52,7 +56,9 @@ const validationSchema = yup.object().shape({
     .min(10, 'A mensagem deve conter pelo menos 10 caracteres')
 })
 
-const Contact: React.FC = () => {
+const Contact: React.FC<ContactProps> = ({
+  saveData = (data) => console.log(data)
+}) => {
   const router = useRouter()
   const [formLoading, setFormLoading] = useState(false)
   const {
@@ -68,8 +74,7 @@ const Contact: React.FC = () => {
     setFormLoading(true)
 
     setTimeout(() => {
-      console.log(data)
-
+      saveData(data)
       setFormLoading(false)
     }, 2000)
   }
@@ -94,95 +99,118 @@ const Contact: React.FC = () => {
               <Text>
                 Nome completo <span className="required">*</span>
               </Text>
-              <TextField.Root error={!!errors.name}>
-                <TextField.Icon>
-                  <UserCircle />
-                </TextField.Icon>
-                <TextField.Input {...register('name')} type="text" />
-              </TextField.Root>
-              {errors.name?.message && (
-                <Text size="xs" className="error-message">
-                  {errors.name.message}
-                </Text>
-              )}
             </label>
+            <TextField.Root error={!!errors.name}>
+              <TextField.Icon>
+                <UserCircle />
+              </TextField.Icon>
+              <TextField.Input
+                {...register('name')}
+                id="name"
+                type="text"
+                aria-errormessage="name-error"
+                aria-invalid="true"
+              />
+            </TextField.Root>
+            {errors.name?.message && (
+              <Text id="name-error" size="xs" className="error-message">
+                {errors.name.message}
+              </Text>
+            )}
             <label htmlFor="email">
               <Text>
                 E-mail <span className="required">*</span>
               </Text>
-              <TextField.Root error={!!errors.email}>
-                <TextField.Icon>
-                  <Envelope />
-                </TextField.Icon>
-                <TextField.Input {...register('email')} type="email" />
-              </TextField.Root>
-              {errors.email?.message && (
-                <Text size="xs" className="error-message">
-                  {errors.email.message}
-                </Text>
-              )}
             </label>
+            <TextField.Root error={!!errors.email}>
+              <TextField.Icon>
+                <Envelope />
+              </TextField.Icon>
+              <TextField.Input
+                {...register('email')}
+                id="email"
+                type="email"
+                aria-errormessage="email-error"
+                aria-invalid="true"
+              />
+            </TextField.Root>
+            {errors.email?.message && (
+              <Text id="email-error" size="xs" className="error-message">
+                {errors.email.message}
+              </Text>
+            )}
             <label htmlFor="phoneNumber">
               <Text>
                 Número de celular <span className="required">*</span>
               </Text>
-              <TextField.Root error={!!errors.phoneNumber}>
-                <TextField.Icon>
-                  <Phone />
-                </TextField.Icon>
-                <TextField.Input
-                  {...register('phoneNumber', {
-                    onChange: masks.phoneMask.onChange
-                  })}
-                  type="tel"
-                />
-              </TextField.Root>
-              {errors.phoneNumber?.message && (
-                <Text size="xs" className="error-message">
-                  {errors.phoneNumber.message}
-                </Text>
-              )}
             </label>
+            <TextField.Root error={!!errors.phoneNumber}>
+              <TextField.Icon>
+                <Phone />
+              </TextField.Icon>
+              <TextField.Input
+                {...register('phoneNumber', {
+                  onChange: masks.phoneMask.onChange
+                })}
+                id="phoneNumber"
+                type="tel"
+                aria-errormessage="phoneNumber-error"
+                aria-invalid="true"
+              />
+            </TextField.Root>
+            {errors.phoneNumber?.message && (
+              <Text id="phoneNumber-error" size="xs" className="error-message">
+                {errors.phoneNumber.message}
+              </Text>
+            )}
             <label htmlFor="reason">
               <Text>
                 Motivo <span className="required">*</span>
               </Text>
-              <Controller
-                control={control}
-                name="reason"
-                render={({ field: { ref, value, onChange } }) => (
-                  <SelectionField
-                    inputRef={ref}
-                    error={!!errors.reason}
-                    options={reasons}
-                    value={reasons.find((c) => c.value === value?.value)}
-                    onChange={onChange}
-                  />
-                )}
-              />
-              {errors.reason?.value?.message && (
-                <Text size="xs" className="error-message">
-                  {errors.reason.value?.message}
-                </Text>
-              )}
             </label>
+            <Controller
+              control={control}
+              name="reason"
+              render={({ field: { ref, value, onChange } }) => (
+                <SelectionField
+                  inputRef={ref}
+                  inputId="reason"
+                  aria-errormessage="reason-error"
+                  aria-invalid="true"
+                  error={!!errors.reason}
+                  placeholder="Selecione"
+                  options={reasons}
+                  value={reasons.find((c) => c.value === value?.value)}
+                  onChange={onChange}
+                />
+              )}
+            />
+            {errors.reason?.value?.message && (
+              <Text id="reason-error" size="xs" className="error-message">
+                {errors.reason.value?.message}
+              </Text>
+            )}
             <label htmlFor="message">
               <Text>
                 Mensagem <span className="required">*</span>
               </Text>
-              <textarea
-                {...register('message')}
-                className={errors.message ? 'is-invalid' : ''}
-              />
-              {errors.message?.message && (
-                <Text size="xs" className="error-message">
-                  {errors.message.message}
-                </Text>
-              )}
             </label>
+            <textarea
+              {...register('message')}
+              id="message"
+              className={errors.message ? 'is-invalid' : ''}
+              aria-errormessage="message-error"
+              aria-invalid="true"
+            />
+            {errors.message?.message && (
+              <Text id="message-error" size="xs" className="error-message">
+                {errors.message.message}
+              </Text>
+            )}
             <div className="buttons-container">
               <Button
                 type="button"
+                aria-label="Ver Apartamentos"
                 variant="secundary"
                 radius="semiRounded"
                 outlined
@@ -192,6 +220,7 @@ const Contact: React.FC = () => {
               </Button>
               <Button
                 type="submit"
+                aria-label="Enviar"
                 variant="primary"
                 radius="semiRounded"
                 disabled={formLoading}

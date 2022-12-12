@@ -3,7 +3,7 @@ import { styled } from '../../../stitches.config'
 export const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  gap: '50px',
+  gap: '40px',
   maxWidth: '480px',
   paddingY: '50px',
   marginX: 'auto',
@@ -19,16 +19,17 @@ export const Container = styled('div', {
   },
 
   form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '20px',
+    label: {
+      display: 'block',
+      marginTop: '20px'
+    },
 
     '.buttons-container': {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
       gap: '20px',
-      marginTop: '10px'
+      marginTop: '30px'
     }
   },
 
