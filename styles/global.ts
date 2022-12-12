@@ -113,7 +113,7 @@ export const GlobalStyle = globalCss({
     width: '100%',
     height: '100%',
     marginX: 'auto',
-    paddingX: '20px',
+    paddingX: '20px'
   },
 
   '.modal-open': {
@@ -122,7 +122,7 @@ export const GlobalStyle = globalCss({
 
   '@bp990': {
     '.main-wrapper': {
-      paddingX: '25px',
+      paddingX: '25px'
     },
 
     '.modal-open': {

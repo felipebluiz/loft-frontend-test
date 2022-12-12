@@ -1,0 +1,252 @@
+[
+  {
+    "id": "1a",
+    "address": {
+      "street": "Rua da Consolação",
+      "number": "1000"
+    },
+    "price": 1000000,
+    "bookmarked": false,
+    "metreage": 100,
+    "vacancies": 2,
+    "bedroom": 3,
+    "nearbySubway": false,
+    "constructionYear": 1990,
+    "picture": {
+      "src": "https://via.placeholder.com/200x200",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Lavanderia",
+      "Portaria 24h",
+      "Segurança",
+      "Piscina"
+    ]
+  },
+  {
+    "id": "2b",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 900000,
+    "bookmarked": false,
+    "metreage": 80,
+    "vacancies": 1,
+    "bedroom": 2,
+    "nearbySubway": true,
+    "constructionYear": 2010,
+    "picture": {
+      "src": "https://via.placeholder.com/400x300",
+      "alt": "Sala do apartamento, com cozinha americana e vista emparedada da janela"
+    },
+    "status": "COMING_SOON",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "3c",
+    "address": {
+      "street": "Rua da Consolação",
+      "number": "1000"
+    },
+    "price": 800000,
+    "bookmarked": false,
+    "metreage": 90,
+    "vacancies": 1,
+    "bedroom": 4,
+    "nearbySubway": false,
+    "constructionYear": 2000,
+    "picture": {
+      "src": "https://via.placeholder.com/300x400",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "4d",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 700000,
+    "bookmarked": false,
+    "metreage": 70,
+    "vacancies": 1,
+    "bedroom": 2,
+    "nearbySubway": true,
+    "constructionYear": 2001,
+    "picture": {
+      "src": "https://via.placeholder.com/400x400",
+      "alt": "Sala do apartamento, com cozinha americana e vista emparedada da janela"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "6f",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 900000,
+    "bookmarked": false,
+    "metreage": 85,
+    "vacancies": 1,
+    "bedroom": 2,
+    "nearbySubway": true,
+    "constructionYear": 1998,
+    "picture": {
+      "src": "https://via.placeholder.com/200x250",
+      "alt": "Sala do apartamento, com cozinha americana e vista emparedada da janela"
+    },
+    "status": "COMING_SOON",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "7g",
+    "address": {
+      "street": "Rua da Consolação",
+      "number": "1000"
+    },
+    "price": 1000000,
+    "bookmarked": false,
+    "metreage": 98,
+    "vacancies": 0,
+    "bedroom": 3,
+    "nearbySubway": false,
+    "constructionYear": 2005,
+    "picture": {
+      "src": "https://via.placeholder.com/300x250",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "8h",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 1100000,
+    "bookmarked": false,
+    "metreage": 77,
+    "vacancies": 1,
+    "bedroom": 3,
+    "nearbySubway": true,
+    "constructionYear": 1988,
+    "picture": {
+      "src": "https://via.placeholder.com/250x300",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "9i",
+    "address": {
+      "street": "Rua da Consolação",
+      "number": "1000"
+    },
+    "price": 1200000,
+    "bookmarked": true,
+    "metreage": 88,
+    "vacancies": 1,
+    "bedroom": 2,
+    "nearbySubway": false,
+    "constructionYear": 2013,
+    "picture": {
+      "src": "https://via.placeholder.com/200x200",
+      "alt": "Sala do apartamento, com cozinha americana e vista emparedada da janela"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "10j",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 1000000,
+    "bookmarked": false,
+    "metreage": 101,
+    "vacancies": 0,
+    "bedroom": 1,
+    "nearbySubway": false,
+    "constructionYear": 2012,
+    "picture": {
+      "src": "https://via.placeholder.com/300x200",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  },
+  {
+    "id": "12l",
+    "address": {
+      "street": "Rua Augusta",
+      "number": "2000"
+    },
+    "price": 700000,
+    "bookmarked": true,
+    "metreage": 92,
+    "vacancies": 2,
+    "bedroom": 2,
+    "nearbySubway": true,
+    "constructionYear": 1996,
+    "picture": {
+      "src": "https://via.placeholder.com/220x220",
+      "alt": "Sala do apartamento, com amplo espaço, vista livre da janela e sem móveis"
+    },
+    "status": "AVAILABLE",
+    "amenities": [
+      "Academia",
+      "Lavanderia",
+      "Portaria 24h",
+      "Salão de Festas"
+    ]
+  }
+]

@@ -22,7 +22,10 @@ export const ApartamentCard: React.FC<ApartamentCardProps> = ({
   const [isLiked, setIsLiked] = useState(apartament.bookmarked)
 
   return (
-    <Container onClick={() => openAppointmentModal(apartament)}>
+    <Container
+      aria-label="apartament-card"
+      onClick={() => openAppointmentModal(apartament)}
+    >
       <div className="image-container">
         <Image
           src={`${apartament.picture.src}.png`}

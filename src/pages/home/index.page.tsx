@@ -70,28 +70,38 @@ const Home: React.FC<HomeProps> = ({ apartaments }) => {
         <Container>
           <div className="page-header">
             <form>
-              <label htmlFor="address">
-                <Text>Pesquisar por endereço</Text>
+              <div>
+                <label htmlFor="address">
+                  <Text>Pesquisar por endereço</Text>
+                </label>
                 <TextField.Root>
-                  <TextField.Input {...register('address')} type="text" />
+                  <TextField.Input
+                    {...register('address')}
+                    id="address"
+                    type="text"
+                  />
                 </TextField.Root>
-              </label>
-              <label htmlFor="bedroom">
-                <Text>Dormitórios</Text>
+              </div>
+              <div>
+                <label htmlFor="bedroom">
+                  <Text>Dormitórios</Text>
+                </label>
                 <Controller
                   control={control}
                   name="bedroom"
                   render={({ field: { ref, value, onChange } }) => (
                     <SelectionField
                       inputRef={ref}
+                      inputId="bedroom"
                       isClearable
+                      placeholder="Selecione"
                       options={bedrooms}
                       value={bedrooms.find((c) => c.value === value?.value)}
                       onChange={onChange}
                     />
                   )}
                 />
-              </label>
+              </div>
             </form>
           </div>
           <div className="page-content">

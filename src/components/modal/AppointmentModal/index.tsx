@@ -154,6 +154,7 @@ export const AppointmentModal = forwardRef<AppointmentModalHandle>(
             <Button
               variant="primary"
               radius="semiRounded"
+              aria-label={!hasAppointment ? 'Agendar Visita' : 'Cancelar'}
               disabled={loading}
               loading={loading}
               onClick={!hasAppointment ? handleAppointment : cancelAppointment}
