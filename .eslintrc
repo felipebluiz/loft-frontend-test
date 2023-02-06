@@ -36,5 +36,8 @@
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "cy": true
   }
 }

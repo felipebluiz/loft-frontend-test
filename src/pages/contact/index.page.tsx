@@ -174,7 +174,7 @@ const Contact: React.FC<ContactProps> = ({
               render={({ field: { ref, value, onChange } }) => (
                 <SelectionField
                   inputRef={ref}
-                  inputId="reason"
+                  inputId="reason-select"
                   aria-errormessage="reason-error"
                   aria-invalid="true"
                   error={!!errors.reason}

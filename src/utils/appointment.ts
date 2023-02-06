@@ -1,3 +1,5 @@
+import { addDays, format, startOfWeek, isWeekend } from 'date-fns'
+
 /* eslint-disable no-unmodified-loop-condition */
 type Appointment = {
   id: string | undefined
@@ -5,24 +7,12 @@ type Appointment = {
 }
 
 export const getAppointmentDays = (): Date[] => {
-  const today = new Date()
-  const current = new Date(today)
-  const end = new Date()
+  const firstDOW = startOfWeek(new Date())
 
-  current.setDate(current.getDate() + 1)
-  end.setDate(current.getDate() + 5)
-
-  const dates = []
-
-  while (current <= end) {
-    if (current.getDay() !== 6 && current.getDay() !== 0) {
-      dates.push(new Date(current))
-    }
-
-    current.setDate(current.getDate() + 1)
-  }
-
-  return dates.slice(0, 3)
+  return Array.from(Array(7))
+    .map((e, i) => new Date(format(addDays(firstDOW, i), 'P')))
+    .filter((day) => !isWeekend(day))
+    .slice(1, 4)
 }
 
 export const getAppointment = (id: string): Appointment | undefined => {

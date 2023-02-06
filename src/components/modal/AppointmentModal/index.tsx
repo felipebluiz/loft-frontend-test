@@ -1,6 +1,7 @@
+/* eslint-disable import/no-duplicates */
 import React, { forwardRef, useRef, useImperativeHandle, useState } from 'react'
-import moment from 'moment'
-import 'moment/locale/pt-br'
+import { format } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 import { Modal, ModalHandle } from '@/components/ui/Modal'
 import { Heading } from '@/components/ui/Heading'
@@ -118,13 +119,13 @@ export const AppointmentModal = forwardRef<AppointmentModalHandle>(
                   className={selectedDay === day.toDateString() ? 'active' : ''}
                 >
                   <Text size="xs" className="day-name">
-                    {moment(day).format('ddd')}
+                    {format(new Date(day), 'eeeeee', { locale: ptBR })}
                   </Text>
                   <Text size="lg" weight="bold" className="day-number">
-                    {moment(day).format('DD')}
+                    {format(new Date(day), 'dd', { locale: ptBR })}
                   </Text>
                   <Text size="xs" className="month-name">
-                    {moment(day).format('MMM')}
+                    {format(new Date(day), 'MMM', { locale: ptBR })}
                   </Text>
                 </button>
               ))}
@@ -137,7 +138,9 @@ export const AppointmentModal = forwardRef<AppointmentModalHandle>(
                   onClick={() => setSelectedHour(hour)}
                   className={selectedHour === hour ? 'active' : ''}
                 >
-                  {hour}
+                  <Text size="xs" className="hour">
+                    {hour}
+                  </Text>
                 </button>
               ))}
             </div>
@@ -147,6 +150,7 @@ export const AppointmentModal = forwardRef<AppointmentModalHandle>(
               variant="secundary"
               radius="semiRounded"
               outlined
+              aria-label="Voltar"
               onClick={() => modalRef.current?.closeModal()}
             >
               Voltar

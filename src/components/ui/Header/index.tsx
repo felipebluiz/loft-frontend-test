@@ -21,10 +21,14 @@ export const Header: React.FC = () => {
           <nav className="navigation-container">
             <ul>
               <li className={router.pathname === '/home' ? 'active' : ''}>
-                <Link href="/">Comprar Apartamentos</Link>
+                <Link href="/" data-cy="Comprar Apartamentos">
+                  Comprar Apartamentos
+                </Link>
               </li>
               <li className={router.pathname === '/contact' ? 'active' : ''}>
-                <Link href="/contato">Contato</Link>
+                <Link href="/contato" data-cy="Contato">
+                  Contato
+                </Link>
               </li>
             </ul>
           </nav>
