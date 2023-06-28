@@ -1,4 +1,6 @@
-## Dependências
+# Loft Frontend Test
+
+### Built With
 
 - [React](https://pt-br.reactjs.org)
 - [Next.js](https://nextjs.org)
