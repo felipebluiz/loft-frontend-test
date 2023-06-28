@@ -16,6 +16,12 @@
 - [Prettier](https://prettier.io)
 - [Cypress](https://www.cypress.io/)
 
+## Preview
+
+![Preview](/public/screenshot.png)
+
+**[View Live Preview](https://felipebluiz-loft.vercel.app)**
+
 # Development
 
 Para instalar todas as dependências, execute o comando:
